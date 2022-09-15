@@ -7,33 +7,33 @@
  */
 int main(void)
 {
-	unsigned long int a, b, c, b1, b2, c1, c2;
+	unsigned long int d, a, b, a1, a2, b1, b2;
 
-	b = 1;
-	c = 2;
+	a = 1;
+	b = 2;
 
-	printf("%lu", b);
+	printf("%lu", a);
 
-	for (a = 1; a < 91; a++)
+	for (d = 1; d < 91; d++)
 	{
-		printf(", %lu", c);
-		c = c + b;
-		b = c - b;
+		printf(", %lu", b);
+		b = b + a;
+		a = b - a;
 	}
 
+	a1 = a / 1000000000;
+	a2 = a % 1000000000;
 	b1 = b / 1000000000;
 	b2 = b % 1000000000;
-	c1 = c / 1000000000;
-	c2 = c % 1000000000;
 
-	for (a = 92; a < 99; ++a)
+	for (d = 92; d < 99; ++d)
 	{
-		printf(", %lu", c1 + (c2 / 1000000000));
-		printf("%lu", c1 % 1000000000);
-		c1 = c1 + b1;
-		b1 = c1 - b1;
-		c2 = c2 + b2;
-		b2 = c2 - b2;
+		printf(", %lu", b1 + (b2 / 1000000000));
+		printf("%lu", b1 % 1000000000);
+		b1 = b1 + a1;
+		a1 = b1 - a1;
+		b2 = b2 + a2;
+		a2 = b2 - a2;
 	}
 	printf("\n");
 	return (0);
